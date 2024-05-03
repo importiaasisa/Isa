@@ -1,4 +1,4 @@
-pip import matplotlib
+import pip
 import matplotlib.pyplot as plt
 import pandas as pd
 import pydeck as pdk
