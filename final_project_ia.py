@@ -7,8 +7,15 @@ import streamlit as st
 st.set_page_config(page_title="Starbucks in the Americas", page_icon=":coffee:",
                    layout="wide", initial_sidebar_state="expanded")
 
-st.markdown("""<style>.stApp {background-color: #00704a; font-family: Helvetica; color: white;}</style>""",
-            unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #00704a;
+            font-family: Helvetica;
+            color: white;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 american_countries = ["US", "CA", "MX", "PA", "GT", "CL", "AR", "CR", "SV"]
 state_list = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
@@ -27,7 +34,6 @@ def read_data():
 def filter_country(sel_countries):
     df = read_data()
     df = df.loc[df['CountryCode'].isin(sel_countries)]
-
     return df
 
 
@@ -78,12 +84,13 @@ def american_pie(df):
 
 
 def main():
-    st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStarbucks&psig=AOvVaw1CqCe7e18nPaRPklJfYRTP&ust=1714835961487000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjqkfTj8YUDFQAAAAAdAAAAABAE', width=150)
+    st.image('https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png', width=150)
     st.title("Starbucks in the Americas")
     st.subheader("designed by Isabella Ampie")
     st.text("From the selection of 10,000 stores around the globe, check out some cool stats!")
-    read_data()
+    df = read_data()
     select_cty = st.multiselect('Choose Your Country', options=american_countries, default=[])
+
     df = filter_country(select_cty)
 
     if 'US' in select_cty:
@@ -96,6 +103,7 @@ def main():
 
 
 main()
+
 
 
 main()
