@@ -1,9 +1,8 @@
-import streamlit as st
-import pandas as pd
-pip install matplotlib
 import matplotlib.pyplot as plt
+import pandas as pd
 import pydeck as pdk
 import seaborn as sns
+import streamlit as st
 
 st.set_page_config(page_title="Starbucks in the Americas", page_icon=":coffee:",
                    layout="wide", initial_sidebar_state="expanded")
