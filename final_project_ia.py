@@ -1,7 +1,6 @@
 import pip
 import pandas as pd
 import pydeck as pdk
-import seaborn as sns
 import streamlit as st
 
 st.set_page_config(page_title="Starbucks in the Americas", page_icon=":coffee:",
