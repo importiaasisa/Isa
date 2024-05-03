@@ -1,6 +1,7 @@
-import pip
+import matplotlib.pyplot as plt
 import pandas as pd
 import pydeck as pdk
+import seaborn as sns
 import streamlit as st
 
 st.set_page_config(page_title="Starbucks in the Americas", page_icon=":coffee:",
@@ -77,6 +78,7 @@ def american_pie(df):
 
 
 def main():
+    st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStarbucks&psig=AOvVaw1CqCe7e18nPaRPklJfYRTP&ust=1714835961487000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjqkfTj8YUDFQAAAAAdAAAAABAE', width=150)
     st.title("Starbucks in the Americas")
     st.subheader("designed by Isabella Ampie")
     st.text("From the selection of 10,000 stores around the globe, check out some cool stats!")
@@ -91,6 +93,9 @@ def main():
     america_map(df)
     bar_graph(df)
     american_pie(df)
+
+
+main()
 
 
 main()
