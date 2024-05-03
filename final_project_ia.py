@@ -77,7 +77,6 @@ def american_pie(df):
 
 
 def main():
-    st.image('Starbucks_Corporation_Logo_2011.svg.png', width=150)
     st.title("Starbucks in the Americas")
     st.subheader("designed by Isabella Ampie")
     st.text("From the selection of 10,000 stores around the globe, check out some cool stats!")
